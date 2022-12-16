@@ -11,10 +11,16 @@ function SellerHome(){
     }
     return(
         <div>
-            <form>
+            <form className="myForm">
+                <label>Product Name</label>
                 <input name="product-name" placeholder="product name" />
-                <textarea name="content" value={note.content} placeholder="product description" rows="3" />
-                <button onClick={handleChange}>add</button>
+                <label>Product Type</label>
+                <select>
+                    <option value="outfits">Outfit</option>
+                    <option value="groceries">Groceries</option>
+                    <option value="tools">Tools</option>
+                </select>
+                <button className="btn btn-primary" onClick={handleChange}>add</button>
             </form>
         </div>
     )
