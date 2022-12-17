@@ -3,7 +3,6 @@ class Milk extends Grocery{
     constructor()
     {
         super("Milk",25)
-        this.ssid = ssid;
     }
 }
 

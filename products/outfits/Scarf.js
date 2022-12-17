@@ -1,10 +1,9 @@
+import WinterOutfit from "./WinterOutfit";
 
-class Scarf {
+class Scarf extends WinterOutfit {
     constructor()
     {
-        this.ssid = ssid;
-        this.name = "Scarf";
-        this.price = 150;
+        super("Scarf",150)
     }
 }
 

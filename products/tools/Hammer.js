@@ -1,11 +1,8 @@
-import { v4 as uuidv4 } from 'uuid';
-const ssid = uuidv4()
-class Hammer {
-    constructor()
-    {
-        this.ssid = ssid;
-        this.name = "Hammer";
-        this.price = 50;
+import HandTool from "./HandTool";
+
+class Hammer extends HandTool {
+    constructor() {
+        super("Hammer", 50)
     }
 }
 

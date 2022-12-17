@@ -3,7 +3,7 @@ class Egg extends Grocery{
     constructor()
     {
         super("Eggs carton",80)
-        this.ssid = ssid;
+        
     }
 }
 
