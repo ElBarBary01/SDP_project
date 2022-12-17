@@ -5,19 +5,19 @@ import ScrewDriver from "../products/tools/ScrewDriver.js";
 import Drill from "../products/tools/Drill.js";
 import Saw from "../products/tools/Saw.js";
 
+
+const toolTypes = { HAMMER: "HAMMER", SCREW_DRIVER: "SCREW_DRIVER", DRILL: "DRILL", SAW: "SAW" };
+
 class ToolsFactory {
 
-    toolTypes = {HAMMER : "HAMMER", SCREW_DRIVER : "SCREW_DRIVER", DRILL : "DRILL", SAW : "SAW"};
-
-    createProduct(productType)
-    {
-        if(productType === toolTypes.HAMMER)
+    createProduct(productType) {
+        if (productType === toolTypes.HAMMER)
             return new Hammer();
-        if(productType === toolTypes.SCREW_DRIVER)
-            return new ScrewDriver(); 
-        if(productType === toolTypes.DRILL)
+        if (productType === toolTypes.SCREW_DRIVER)
+            return new ScrewDriver();
+        if (productType === toolTypes.DRILL)
             return new Drill();
-        if(productType === toolTypes.SAW)
+        if (productType === toolTypes.SAW)
             return new Saw();
     }
 }
