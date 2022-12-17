@@ -1,7 +1,8 @@
+
 class Tshirt {
     constructor()
     {
-        this.id = 0;
+        this.ssid = ssid;
         this.name = "T-shirt";
         this.price = 250;
     }

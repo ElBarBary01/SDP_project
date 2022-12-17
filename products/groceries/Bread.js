@@ -1,9 +1,10 @@
-class Bread {
-    constructor()
-    {
-        this.id = 0;
-        this.name = "Bread";
-        this.price = 10;
+import Grocery from './Grocery.js';
+
+class Bread extends Grocery {
+
+    constructor() {
+        super("Bread", 10)
+        this.ssid = ssid;
     }
 }
 

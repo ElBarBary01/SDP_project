@@ -1,8 +1,7 @@
 import FactoryOrchestrator from "./FactoryOrchestrator.js";
-import GroceriesFactory from "./GroceriesFactory.js";
 
 
-const groceriesFactory = new FactoryOrchestrator().createFactory("OUTFITS")
-const egg = groceriesFactory.createProduct("COAT");
+const groceriesFactory = new FactoryOrchestrator().createFactory("GROCERIES")
+const egg = groceriesFactory.createProduct("EGG");
 console.log(egg.price);
 

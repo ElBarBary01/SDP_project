@@ -1,7 +1,8 @@
+
 class Short {
     constructor()
     {
-        this.id = 0;
+        this.ssid = ssid;
         this.name = "Short";
         this.price = 200;
     }
