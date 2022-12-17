@@ -34,3 +34,14 @@ const newProduct = groceryFactory.createProduct("MEAT");
 console.log(newProduct)
 Product.insertMany(newProduct)
 
+app.post("/", (req,res)=>{
+
+    console.log(req.body)
+    res.send(200);
+});
+app.post("/complain", (req,res)=>{
+
+    console.log(req.body)
+    res.send(200);
+});
+

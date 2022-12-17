@@ -11,13 +11,8 @@ function Outfits(props){
   const cart2 = useContext(CartContext);
   const productQuantity = cart2.getProductQuantity(props.title);
   const item = {title: props.title, content: props.content}
-  const [cart, setCart] = useState([])
-  function addToCart(){
-    // console.log(`added: ${props.title}, ${props.content}`);
-    setCart([...cart, item])
-    console.log(cart);
-    
-  }
+  
+  
   console.log(cart2.items)
   return(
     <>

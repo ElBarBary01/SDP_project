@@ -38,12 +38,12 @@ function Home(){
         {/* <Search products={products} setProducts={setProducts} /> */}
         <h1>Outfits</h1>
         <h5>Winter Outfits</h5>
-        <Row xs={1} md={5} className="g-4 row">
+        <Row xs={1} md={4} className="g-4 row">
         {products.map((p,idx) =>(<Col key={idx}><Outfits title={p} content="black t-shirt"/></Col>))}
         </Row>
         {/* <div className="products">{products.map(p =>(<Outfits title={p} content="black t-shirt"/>))}</div> */}
         <h5>Summer Outfits</h5>
-        <Row xs={1} md={5} className="g-4">
+        <Row xs={1} md={4} className="g-4">
         <Col><Outfits title="t-shirt" content="black t-shirt"/></Col>
         <Col><Outfits title="t-shirt" content="black t-shirt"/></Col>
         <Col><Outfits title="t-shirt" content="black t-shirt"/></Col>

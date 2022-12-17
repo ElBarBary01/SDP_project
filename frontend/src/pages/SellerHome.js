@@ -14,16 +14,20 @@ function SellerHome(){
         <>
         <NavbarSeller />
         <div>
-            <form className="myForm">
+            <form className="myForm" action="http://localhost:5001/"method="POST">
                 <label>Product Name</label>
                 <input name="product-name" placeholder="product name" />
+                <label>Price</label>
+                <input name="product-Price" placeholder="product Prcie" />
                 <label>Product Type</label>
-                <select>
-                    <option value="outfits">Outfit</option>
-                    <option value="groceries">Groceries</option>
-                    <option value="tools">Tools</option>
+                <select name="type">
+                    <option value="SUMMER_OUTFIT">Summer Outfit</option>
+                    <option value="WINTER_OUTFIT">Winter Outfit</option>
+                    <option value="GORCERY">Groceries</option>
+                    <option value="HAND_TOOLS">Hand Tools</option>
+                    <option value="POWER_TOOLS">Power Tools</option>
                 </select>
-                <button className="btn btn-primary" onClick={handleChange}>add</button>
+                <button className="btn btn-primary" type="submit">add</button>
             </form>
         </div>
         </>
