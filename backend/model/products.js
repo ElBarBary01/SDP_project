@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 const { Schema } = mongoose;
 
 const productSchema = new Schema({
-    ssid: { type: String }, // String is shorthand for {type: String}
+    ssid: { type: String },
     type: { type: String, enum: ['SUMMER_OUTFIT', 'WINTER_OUTFIT', 'HAND_TOOLS', 'POWER_TOOLS', 'GORCERY'] },
     name: { type: String },
     price: { type: Number }

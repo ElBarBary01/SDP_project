@@ -1,7 +1,8 @@
+
 class Coat {
     constructor()
     {
-        this.id = 0;
+        this.ssid = ssid;
         this.name = "Coat";
         this.price = 800;
     }

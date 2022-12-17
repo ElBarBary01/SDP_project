@@ -1,25 +1,13 @@
+import { v4 as uuidv4 } from 'uuid';
+const ssid = uuidv4()
 class Product {
-    constructor(id, name, price)
+    constructor(name, price)
     {
-        this.id = id;
         this.name = name;
         this.price = price;
+        this.ssid = ssid
     }
 
-    get id()
-    {
-        return this.id;
-    }
-
-    get name()
-    {
-        return this.name;
-    }
-
-    get price()
-    {
-        return this.price;
-    }
 }
 
 export default Product;

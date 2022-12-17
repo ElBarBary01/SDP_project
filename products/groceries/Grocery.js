@@ -3,15 +3,10 @@ import Product from "../Product.js"
 class Grocery extends Product
 {
 
-    constructor(name, price, groceryType)
+    constructor(name, price)
     {
-        super(name, price);
-        this.groceryType = groceryType;
-    }
-
-    get groceryType()
-    {
-        return this.groceryType;
+        super(name,price)
+        this.type = "GORCERY";
     }
     
 }

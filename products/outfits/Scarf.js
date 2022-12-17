@@ -1,7 +1,8 @@
+
 class Scarf {
     constructor()
     {
-        this.id = 0;
+        this.ssid = ssid;
         this.name = "Scarf";
         this.price = 150;
     }
