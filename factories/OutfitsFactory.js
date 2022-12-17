@@ -5,19 +5,17 @@ import SummerOutfit from "../products/outfits/SummerOutfit.js";
 import Tshirt from "../products/outfits/Tshirt.js";
 import WinterOutfit from "../products/outfits/WinterOutfit.js";
 
+const outfitTypes = { COAT: "COAT", SCARF: "SCARF", TSHIRT: "TSHIRT", SHORT: "SHORT" };
 class OutfitsFactory {
 
-    outfitTypes = {COAT : "COAT", SCARF : "SCARF", TSHIRT : "TSHIRT", SHORT : "SHORT"};
-
-    createProduct(productType)
-    {
-        if(productType === outfitTypes.COAT)
+    createProduct(productType) {
+        if (productType === outfitTypes.COAT)
             return new Coat();
-        if(productType === outfitTypes.SCARF)
+        if (productType === outfitTypes.SCARF)
             return new Scarf();
-        if(productType === outfitTypes.TSHIRT)
+        if (productType === outfitTypes.TSHIRT)
             return new Tshirt();
-        if(productType === outfitTypes.SHORT)
+        if (productType === outfitTypes.SHORT)
             return new Short();
     }
 }
