@@ -1,0 +1,24 @@
+{
+  "type": "module",
+  "name": "sdp_project",
+  "version": "1.0.0",
+  "description": "Project for software desing patterns (Task1)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElBarBary01/SDP_project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ElBarBary01/SDP_project/issues"
+  },
+  "homepage": "https://github.com/ElBarBary01/SDP_project#readme",
+  "dependencies": {
+    "module-name": "^0.0.1-security"
+  }
+}
