@@ -2,16 +2,13 @@ import Product from "../Product.js";
 
 class SummerOutfit extends Product
 {
-    constructor(name, price, outfitType)
+    constructor(name, price)
     {
-        super(name, price);
-        this.outfitType = outfitType;
+        super(name,price)
+        this.type = "SUMMER_OUTFIT";
     }
+   
 
-    get outfitType()
-    {
-        return this.outfitType;
-    }
 }
 
 export default SummerOutfit;

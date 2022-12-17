@@ -4,7 +4,7 @@ import Cheese from "../products/groceries/Cheese.js";
 import Egg from "../products/groceries/Egg.js";
 import Milk from "../products/groceries/Milk.js";
 import Meat from "../products/groceries/Meat.js";
-const groceryTypes = {BREAD : "BREAD", CHESSE : "CHEESE", EGG : "EGG", MILK : "MILK", MEAT : "MEAT"}
+const groceryTypes = {BREAD : "BREAD", CHEESE : "CHEESE", EGG : "EGG", MILK : "MILK", MEAT : "MEAT"}
 
 class GroceriesFactory {
     

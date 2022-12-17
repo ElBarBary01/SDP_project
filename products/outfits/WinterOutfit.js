@@ -2,17 +2,11 @@ import Product from "../Product.js";
 
 class WinterOutfit extends Product {
 
-    constructor(name, price, outfitType)
+    constructor(name, price)
     {
-        super(name, price);
-        this.outfitType = outfitType;
-    }
-
-    get outfitType()
-    {
-        return this.outfitType;
-    }
-    
+        super(name,price)
+        this.type = "WINTER_OUTFIT";
+    }  
 }
 
 export default WinterOutfit;

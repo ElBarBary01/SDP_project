@@ -2,17 +2,11 @@ import Product from "../Product.js"
 
 class PowerTool extends Product
 {
-    constructor(name, price, toolType)
+    constructor(name, price)
     {
-        super(name, price);
-        this.toolType = toolType;
+        super(name,price)
+        this.type = "POWER_TOOLS";
     }
-
-    get toolType()
-    {
-        return this.toolType;
-    }
-
 }
 
 export default PowerTool;

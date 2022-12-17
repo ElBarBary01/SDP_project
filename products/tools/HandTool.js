@@ -1,18 +1,11 @@
 import Product from "../Product.js";
 
 class HandTool extends Product {
-
-    constructor(name, price, toolType)
+    constructor(name, price)
     {
-        super(name, price);
-        this.toolType = toolType;
-    }
-
-    get toolType()
-    {
-        return this.toolType;
-    }
-    
+        super(name,price)
+        this.type = "HAND_TOOLS";
+    }    
 }
 
 export default HandTool;
