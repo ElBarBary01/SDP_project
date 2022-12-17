@@ -1,20 +1,17 @@
 import react from "react";
 import { Modal } from "react-bootstrap";
 
-function Navbar(){
+function NavbarSeller(){
   return(
     <nav className="nav">
       <a href="/" className="site-title">sbace</a>
     <ul>
       <li>
-        <a href="/cart">Cart</a>
-      </li>
-      <li>
-        <a href="/complaint">Customer Service</a>
+        <a href="/seller">Add product</a>
       </li>
     </ul>
     </nav>
   )
 }
 
-export default Navbar;
+export default NavbarSeller;

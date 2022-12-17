@@ -1,4 +1,5 @@
 import react, { useState } from "react";
+import NavbarSeller from "../NavbarSeller";
 
 function SellerHome(){
     const[note, setNote] = useState({
@@ -10,6 +11,8 @@ function SellerHome(){
         setNote({title: name, content: value})
     }
     return(
+        <>
+        <NavbarSeller />
         <div>
             <form className="myForm">
                 <label>Product Name</label>
@@ -23,6 +26,7 @@ function SellerHome(){
                 <button className="btn btn-primary" onClick={handleChange}>add</button>
             </form>
         </div>
+        </>
     )
 }
 export default SellerHome;

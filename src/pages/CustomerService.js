@@ -1,26 +1,16 @@
-import react from "react";
-import axios from "axios";
+import React from "react";
+import ComplaintCard from "../ComplaintCard";
 
 function CustomerService(){
-
-  const handleSubmit = function(req){
-    axios.post("http://localhost:5001")
-    req.preventDefault()
-    // console.log(req.nativeEvent.srcElement.input.value);
-  }
-
-  return(
-    <div>
-      <h1>Customer Service</h1>
-      <form action="http://localhost:5001" method="POST" className="myForm">
-        <label>Your email</label>
-        <input type="email" name="email"></input>
-        <label>Complaint</label>
-        <textarea name="complaint"></textarea>
-        <button className="btn btn-primary" type="submit">submit</button>
-      </form>
-    </div>
-  )
+    return(
+        <div>
+            <h1>Customer complaints</h1>
+            <ComplaintCard name="omar El barbary" body="can we postpone the deadline" />
+            <ComplaintCard name="moamen yasser" body="can we postpone the deadline" />
+            <ComplaintCard name="sbace" body="can we postpone the deadline" />
+            <ComplaintCard name="bassem" body="can we postpone the deadline" />
+        </div>
+    )
 }
 
 export default CustomerService;
