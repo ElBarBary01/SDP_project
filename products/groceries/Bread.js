@@ -4,7 +4,6 @@ class Bread extends Grocery {
 
     constructor() {
         super("Bread", 10)
-        this.ssid = ssid;
     }
 }
 
