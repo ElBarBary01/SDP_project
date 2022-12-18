@@ -4,8 +4,9 @@ const { Schema } = mongoose;
 const userSchema = new Schema({
     type: { type: String, enum: ['SELLER', 'CUSTOMER', 'SERVICE'] },
     name: { type: String },
-    email: { type: String }
+    email: { type: String ,unique:true },
+    history:{  type: Array, default: []}
 }
 );
-const user = mongoose.model('User', userSchema,'USERS');
+const user = mongoose.model('User', userSchema, 'users');
 export default user;
