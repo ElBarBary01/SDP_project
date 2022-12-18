@@ -16,14 +16,14 @@ function SellerHome(){
         <div>
             <form className="myForm" action="http://localhost:5001/"method="POST">
                 <label>Product Name</label>
-                <input name="product-name" placeholder="product name" />
+                <input name="name" placeholder="product name" />
                 <label>Price</label>
-                <input name="product-Price" placeholder="product Prcie" />
+                <input name="price" placeholder="product Prcie" />
                 <label>Product Type</label>
                 <select name="type">
                     <option value="SUMMER_OUTFIT">Summer Outfit</option>
                     <option value="WINTER_OUTFIT">Winter Outfit</option>
-                    <option value="GORCERY">Groceries</option>
+                    <option value="GROCERIES">Groceries</option>
                     <option value="HAND_TOOLS">Hand Tools</option>
                     <option value="POWER_TOOLS">Power Tools</option>
                 </select>
