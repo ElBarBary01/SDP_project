@@ -1,4 +1,4 @@
-import SummerOutfit from "./SummerOutfit";
+import SummerOutfit from "./SummerOutfit.js";
 
 class Tshirt extends SummerOutfit {
     constructor()

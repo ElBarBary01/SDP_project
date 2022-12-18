@@ -1,4 +1,4 @@
-import WinterOutfit from "./WinterOutfit";
+import WinterOutfit from "./WinterOutfit.js";
 
 class Coat extends WinterOutfit{
     constructor()

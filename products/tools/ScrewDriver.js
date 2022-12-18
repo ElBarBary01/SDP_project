@@ -1,4 +1,4 @@
-import HandTool from "./HandTool";
+import HandTool from "./HandTool.js";
 
 class ScrewDriver extends HandTool {
     constructor()

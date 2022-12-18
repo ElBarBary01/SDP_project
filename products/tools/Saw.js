@@ -1,4 +1,4 @@
-import PowerTool from "./PowerTool";
+import PowerTool from "./PowerTool.js";
 
 class Saw extends PowerTool {
     constructor()
