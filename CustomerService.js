@@ -1,7 +1,9 @@
+import User from "./User.js";
+
 class CustomerService extends User {
-    constructor(id, name, age, gender, email)
+    constructor(name, email)
     {
-        super(id, name, age, gender, email);
+        super(name, email);
     }
 
     reviewComplain(complain)
@@ -15,3 +17,5 @@ class CustomerService extends User {
     }
 
 }
+
+export default CustomerService;

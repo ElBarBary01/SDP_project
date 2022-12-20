@@ -1,7 +1,10 @@
+import User from "./User.js";
+
+
 class ProductSeller extends User {
-    constructor(id, name, age, gender, email)
+    constructor(name, email)
     {
-        super(id, name, age, gender, email);
+        super(name, email);
     }
 
     addProduct(product)
@@ -25,3 +28,5 @@ class ProductSeller extends User {
     }
 
 }
+
+export default ProductSeller;
