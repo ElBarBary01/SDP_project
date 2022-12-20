@@ -1,13 +1,12 @@
-class Customer extends User {
-    constructor(id, name, age, gender, email, cart)
-    {
-        super(id, name, age, gender, email);
-        this.cart = cart;
-    }
+import User from "./User.js";
 
-    get cart()
+class Customer extends User {
+
+    cart = []
+
+    constructor(name, email)
     {
-        return this.cart;
+        super(name, email);
     }
 
     addToCart(product)
@@ -39,3 +38,5 @@ class Customer extends User {
         return totalPrice;    
     }
 }
+
+export default Customer;
