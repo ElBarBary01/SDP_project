@@ -6,6 +6,8 @@ const productSchema = new Schema({
     type: { type: String, enum: ['SUMMER_OUTFIT', 'WINTER_OUTFIT', 'HAND_TOOLS', 'POWER_TOOLS', 'GROCERIES'] },
     name: { type: String },
     price: { type: Number },
+    quantity:{type:Number},
+    image:{type:String},
     review:{
         score:{type:Number,min:0,max:5},
         comment:{type:String}
