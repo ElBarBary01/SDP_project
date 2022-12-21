@@ -5,7 +5,16 @@ class Product {
     {
         this.name = name;
         this.price = price;
-        this.ssid = ssid
+        this.ssid = ssid;
+    }
+    setPrice(price){
+        this.price=price;
+    }
+    setName(name){
+        this.name=name;
+    }
+    setImage(image){
+        this.image=image
     }
 
 }
