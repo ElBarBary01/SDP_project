@@ -37,6 +37,7 @@ class Customer extends User {
             totalPrice = totalPrice + this.cart[i].price;
         return totalPrice;    
     }
+    
 }
 
 export default Customer;
