@@ -3,6 +3,7 @@ import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
+import router from "./routes.js";
 import user from "./model/users.js"
 import Product from "./model/products.js";
 import Complaint from "./model/complaints.js"
@@ -13,6 +14,7 @@ dotenv.config();
 app.use(bodyParser.json({extended: true}));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(cors());
+app.use('/api', router)
 
 
 const PORT = 5001;

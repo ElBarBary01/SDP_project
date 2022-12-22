@@ -1,6 +1,6 @@
-import Customer from "./Customer.js";
-import CustomerService from "./CustomerService.js";
-import ProductSeller from "./ProductSeller.js";
+import Customer from "../users/Customer.js";
+import CustomerService from "../users/CustomerService.js";
+import ProductSeller from "../users/ProductSeller.js";
 
 const userTypes = {CUSTOMER : "CUSTOMER", CUSTOMER_SERVICE : "CUSTOMER_SERVICE", PRODUCT_SELLER : "PRODUCT_SELLER"};
 

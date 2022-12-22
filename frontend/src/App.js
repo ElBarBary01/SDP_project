@@ -11,6 +11,8 @@ import { Container } from "react-bootstrap";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import CustomerService from "./pages/CustomerService";
+import History from "./pages/History";
+import SellerProducts from "./pages/SellerProducts";
 
 function App() { 
   return (
@@ -23,6 +25,8 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/customer-service" element={<CustomerService />} />
+        <Route path="/history" element={<History />} />
+        <Route path="/seller-products" element={<SellerProducts />} />
       </Routes>
     </>
   );
