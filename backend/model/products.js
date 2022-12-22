@@ -6,12 +6,13 @@ const productSchema = new Schema({
     type: { type: String, enum: ['SUMMER_OUTFIT', 'WINTER_OUTFIT', 'HAND_TOOLS', 'POWER_TOOLS', 'GROCERIES'] },
     name: { type: String },
     price: { type: Number },
-    quantity:{type:Number},
+    quantitysold:{type:Number,default:0},
     image:{type:String},
     review:{
         score:{type:Number,min:0,max:5},
         comment:{type:String}
-    }
+    },
+    seller:{type : String}
 }
 );
 const Product = mongoose.model('Product', productSchema,'Products');

@@ -6,14 +6,15 @@ class CustomerService extends User {
         super(name, email);
     }
 
-    reviewComplain(complain)
+    reviewComplain()
     {
+        //axios get to retrieve
 
     }
 
     respondToComplain(complain)
     {
-        
+        //axios post to update
     }
 
 }
