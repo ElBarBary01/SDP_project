@@ -4,10 +4,7 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import router from "./routes.js";
-import user from "./model/users.js"
-import Product from "./model/products.js";
-import Complaint from "./model/complaints.js"
-import FactoryOrchestrator from "../factories/FactoryOrchestrator.js";
+
 const app = express();
 dotenv.config();
 
@@ -28,13 +25,6 @@ const handleServerStartup = () => {
     app.listen(PORT, () => console.log(`Server listening on port ${PORT}`))
 }
 await mongoose.connect(process.env.CONNECTION_URL, mongooseOptions, handleServerStartup)
-/*
-var newuser = new user({type:"CUSTOMER",email:"omar@gmail",name:"omar"})
-newuser.save()
-const groceryFactory = new FactoryOrchestrator().createFactory("GROCERIES")
-const newProduct = groceryFactory.createProduct("MEAT");
-console.log(newProduct)
-Product.insertMany(newProduct)*/
 
 
 

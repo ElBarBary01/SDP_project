@@ -20,11 +20,3 @@ class UsersFactory {
 
 export default UsersFactory;
 
-
-/*const usersFactory = new UsersFactory();
-
-const u = usersFactory.createUser("CUSTOMER");
-
-u.name = "Momen";
-
-console.log(u.name);*/
