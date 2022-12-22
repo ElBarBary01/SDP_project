@@ -33,6 +33,7 @@ class ProductSeller extends User {
         try {
             console.log(product)
             await axios.post("http://localhost:5001/api/products", product)
+            return product
         }
         catch (e) {
             console.log(e.message)
@@ -44,7 +45,7 @@ class ProductSeller extends User {
     async updateProduct(product) {
         try {
             var { price, name, image, ssid } = product;
-            //await axios.post("http://localhost:5001/api/products",product) 
+            await axios.patch("http://localhost:5001/api/products",product) 
         }
         catch (e) {
             console.log(e.message)
@@ -63,8 +64,9 @@ class ProductSeller extends User {
 
     async checkProductPerformance(product) {
         try {
-            //  var email = this.email
-            //  var results = axios.get(`http://localhost:5001/api/products/seller/${email}`)
+              var email = this.email
+              var results = await axios.get(`http://localhost:5001/api/products/seller/${email}`)
+              return results
         }
         catch (e) {
             console.log(e.message)
