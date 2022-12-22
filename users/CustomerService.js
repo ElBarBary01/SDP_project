@@ -1,4 +1,5 @@
 import User from "./User.js";
+import axios from "axios"
 
 class CustomerService extends User {
     constructor(name, email)
@@ -6,15 +7,25 @@ class CustomerService extends User {
         super(name, email);
     }
 
-    reviewComplain()
+    async reviewComplain()
     {
-        //axios get to retrieve
+        try{
+        await axios.get("http://localhost:5001/api/complaint")
+        }
+        catch(e){
 
+        }
     }
 
-    respondToComplain(complain)
+    async respondToComplain(res)
     {
-        //axios post to update
+        try{
+        var {email,response} =res
+        await axios.post("http://localhost:5001/api/complaint",{"emal":email,"response":response})
+        }
+        catch (e) {
+            console.log(e.message)
+        }
     }
 
 }

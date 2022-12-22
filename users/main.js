@@ -5,10 +5,10 @@ import FactoryOrchestrator from "../factories/FactoryOrchestrator.js";
 var omar = new ProductSeller("omar","omar@gmail");
 //var omar2 = new Customer("omar","omar@gmail");
 
-var product = await omar.addProduct({category:"GROCERIES",type:"EGG",name:"sbace test",})
+var product = await omar.addProduct({category:"GROCERIES",type:"EGG",name:"sbace test3",})
 console.log(product);
-omar.checkProductPerformance(product.ssid);
-omar.updateProduct({ssid:product.ssid,name:"sabce test2"});
+//omar.checkProductPerformance(product.ssid);
+//omar.updateProduct({ssid:product.ssid,name:"sabce test2"});
 
 
 /*
