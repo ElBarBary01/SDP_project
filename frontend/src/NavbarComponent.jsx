@@ -19,7 +19,7 @@ function NavbarComponent(){
   }
 
   const checkout = async()=>{
-    await fetch("http://localhost:5001/checkout/", {
+    await fetch("http://localhost:5001/api/products/buy/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

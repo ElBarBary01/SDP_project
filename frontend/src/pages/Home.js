@@ -11,7 +11,7 @@ function Home(){
   const [initialProducts, setInitialProducts] = useState([])
   const [products, setProducts] = useState([])
   useEffect(()=>{
-    axios.get("http://localhost:5001/products").then(res => {
+    axios.get("http://localhost:5001/api/products").then(res => {
       setProducts(res.data.map(p => {
         return {
           name: p.name,
