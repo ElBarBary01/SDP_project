@@ -1,9 +1,10 @@
 import { v4 as uuidv4 } from 'uuid';
 const ssid = uuidv4()
 class Product {
-    constructor(name, price)
+    constructor(name, price,seller)
     {
         this.name = name;
+        this.seller = seller
         this.price = price;
         this.ssid = ssid;
     }
@@ -15,6 +16,9 @@ class Product {
     }
     setImage(image){
         this.image=image
+    }
+    setSeller(seller){
+        this.seller=seller
     }
 
 }

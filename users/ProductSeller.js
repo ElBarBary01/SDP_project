@@ -5,8 +5,7 @@ import FactoryOrchestrator from "../factories/FactoryOrchestrator.js";
 
 
 class ProductSeller extends User {
-    constructor(name, email)
-    {
+    constructor(name, email) {
         super(name, email);
     }
 
@@ -16,50 +15,59 @@ class ProductSeller extends User {
      * @param {product category , product type,price ,name , image} product
      * @param category should be one of the following {"OUTFITS", "GROCERIES", "TOOLS"} 
      */
-    async addProduct(product)
-    {
-        var { category , type,price ,name , image} = product;
+    async addProduct(product) {
+        var { category, type, price, name, image } = product;
         var productFactory = new FactoryOrchestrator().createFactory(category)
         var product = productFactory.createProduct(type);
-        if(name){
+        if (name) {
             product.setName(name);
         }
-        if(price){
+        if (price) {
             product.setPrice(price);
         }
-        if(image){
+        if (image) {
             product.setImage(image);
         }
 
-        var products = JSON.stringify(product)
-        /*try{
-            console.log(products)
-        await axios.post("http://localhost:5001/api/product",products)
+        try {
+            console.log(product)
+            await axios.post("http://localhost:5001/api/products", product)
         }
-        catch(e){
-       console.log(e.message)
-        }*/
-        return products
+        catch (e) {
+            console.log(e.message)
+        }
 
     }
 
 
-    updateProduct(product)
-    {
-        var {price ,name , image,ssid} = product;
-        //axios patch using ssid 
+    async updateProduct(product) {
+        try {
+            var { price, name, image, ssid } = product;
+            //await axios.post("http://localhost:5001/api/products",product) 
+        }
+        catch (e) {
+            console.log(e.message)
+        }
 
     }
 
-    removeProduct(ssid)
-    {
-            //axios call to delete
+    async removeProduct(ssid) {
+        try {
+             await axios.delete(`http://localhost:5001/api/products/${ssid}`)
+        }
+        catch (e) {
+            console.log(e.message)
+        }
     }
 
-    checkProductPerformance(product)
-    {
-       // results = axios.get to a product with ssid then return the qunatity sold
-        
+    async checkProductPerformance(product) {
+        try {
+            //  var email = this.email
+            //  var results = axios.get(`http://localhost:5001/api/products/seller/${email}`)
+        }
+        catch (e) {
+            console.log(e.message)
+        }
     }
 
 }
