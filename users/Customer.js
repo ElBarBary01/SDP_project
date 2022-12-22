@@ -43,12 +43,21 @@ class Customer extends User {
     }
     async review(ssid,score){
 
-
+        try{
         await axios.patch("http://localhost:5001/api/review", { "ssid":ssid,"score":score });
+        }
+        catch(e){
+            console.log(e.message)
+        }
 
     }
     async customersevice(complaint){
+        try{
         await axios.patch("http://localhost:5001/api/complaint", { "email":this.email,"complaint":complaint });
+        }
+        catch(e){
+            console.log(e.message)
+        }
     }
 
 }
