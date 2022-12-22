@@ -62,7 +62,7 @@ class ProductSeller extends User {
         }
     }
 
-    async checkProductPerformance(product) {
+    async checkProductPerformance() {
         try {
               var email = this.email
               var results = await axios.get(`http://localhost:5001/api/products/seller/${email}`)

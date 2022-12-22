@@ -1,6 +1,7 @@
 import Short from "../products/outfits/Short.js";
 import Tshirt from "../products/outfits/Tshirt.js";
 
+const outfitTypes = { TSHIRT: "TSHIRT", SHORT: "SHORT"}
 
 class SummerFactory {
     createProduct(productType) {

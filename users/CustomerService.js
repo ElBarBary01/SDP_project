@@ -6,7 +6,18 @@ class CustomerService extends User {
     {
         super(name, email);
     }
-
+    
+    async respondToComplain(res)
+    {
+        try{
+        var {email,response} =res
+       var newRes = await axios.patch("http://localhost:5001/api/complaint",{"email":email,"response":response})
+       return newRes
+        }
+        catch (e) {
+            console.log(e.message)
+        }
+    }
     async reviewComplain()
     {
         try{
@@ -16,20 +27,10 @@ class CustomerService extends User {
         }
         catch(e){
 
+            console.log(e.message);
         }
     }
 
-    async respondToComplain(res)
-    {
-        try{
-        var {email,response} =res
-       var newRes = await axios.post("http://localhost:5001/api/complaint",{"email":email,"response":response})
-       return newRes
-        }
-        catch (e) {
-            console.log(e.message)
-        }
-    }
 
 }
 
