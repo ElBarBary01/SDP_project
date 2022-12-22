@@ -40,7 +40,10 @@ class ProductSeller extends User {
         }
 
     }
-
+/**
+ * takes new parameters and calls the endpoint to update them
+ * @param {*} product 
+ */
 
     async updateProduct(product) {
         try {
@@ -52,6 +55,7 @@ class ProductSeller extends User {
         }
 
     }
+    
 
     async removeProduct(ssid) {
         try {
@@ -62,6 +66,7 @@ class ProductSeller extends User {
         }
     }
 
+    //fetches the products sold by this vendor
     async checkProductPerformance() {
         try {
               var email = this.email
