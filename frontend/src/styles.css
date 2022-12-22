@@ -5,6 +5,11 @@ body{
     margin: 0;
     background: #eee;
     text-align: center;
+    font-family: 'Dosis', sans-serif;
+    font-size: 2rem;
+    background-image: radial-gradient(#bfc0c1 7.2%, transparent 0);
+    background-size: 17px 17px;
+
 }
 h1{
     margin: 30px 0;
@@ -72,9 +77,15 @@ h5{
     box-shadow: 0 2px 5px #ccc;
     padding: 10px;
     width: 340px;
-    margin: 16px;
+    margin: 16px 50px;
     float: left;
     text-align: center;
+}
+.modal-card button{
+    width: 40px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 10px;
 }
 .home-title{
     padding-top: 15px;
@@ -90,6 +101,13 @@ h5{
     margin: 20px 0;
     width: 100%;
 }
+hr{
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    border: dashed 3px #181D31;
+    width: 650px;
+}
 .myForm input, .myForm textarea{
     width: 30%;
     padding: 6px 10px;
@@ -102,10 +120,11 @@ h5{
 }
 .searchBar input{
     box-shadow: 0 10px 15px #ccc;
-    border: 1px solid;
-    border-radius: 5px;
+    border: 0 solid;
+    border-radius: 50px;
     width: 300px;
     padding: 5px;
+    text-align: center;
 }
 .myForm .btn{
     margin-top: 20px;
@@ -115,4 +134,21 @@ h5{
     margin: auto;
     width: 30%;
     padding: 10px;
+}
+.products{
+    
+}
+.cart-btn{
+    margin: 0 30px;
+}
+.txt-area-reply{
+    margin-top: 20px;
+}
+.seller ul{
+    list-style: none;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.seller li:hover{
+    cursor: pointer
 }

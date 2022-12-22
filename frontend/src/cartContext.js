@@ -17,33 +17,35 @@ export function CartProvider({children}){
         const quantity = cartProducts.find(product => product.id === id)?.quantity
         if(quantity === undefined){
             return 0;
+        }else{
+            return quantity;
         }
-        return quantity;
+        
     }
-    function addOneToCart(id){
+    function addOneToCart(id, price, _id){
         const quantity = getProductQuantity(id);
 
         if(quantity === 0){ //product not in cart
             setCartProducts(
                 [
-                    ...cartProducts, {id: id, quantity: 1}
+                    ...cartProducts, {id: id, quantity: 1, price: price, _id: _id}
                 ]
             )
+        }else{
+            setCartProducts(
+                cartProducts.map(p => p.id === id? {...p, quantity: p.quantity + 1}: p)
+            )
         }
-
-        setCartProducts(
-            cartProducts.map(p => p.id === id? {...p, quantity: p.quantity + 1}: p)
-        )
-
     }
     function removeOneFromCart(id){
         const quantity = getProductQuantity(id);
         if(quantity === 1){
             deleteFromCart(id);
+        }else{
+            setCartProducts(
+                cartProducts.map(p => p.id === id? {...p, quantity: p.quantity - 1}: p)
+            )
         }
-        setCartProducts(
-            cartProducts.map(p => p.id === id? {...p, quantity: p.quantity - 1}: p)
-        )
     }
 
     function deleteFromCart(id){
