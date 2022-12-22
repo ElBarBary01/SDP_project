@@ -24,7 +24,7 @@ function NavbarComponent(){
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify({items: cart.items, email: email})
+      body: JSON.stringify({items: cart.items, email: email, total: cart.getTotalCost()})
     })
   }
 
