@@ -16,7 +16,7 @@ router.get("/products", async (req, res) => {
 //get product by ssid
 router.get("/products/:ssid", async (req, res) => {
     try {
-        var { ssid } = req.params.ssid
+        var  ssid  = req.params.ssid
         const records = await Product.find({ ssid: ssid });
         res.status(200).json(records);
     } catch (e) {
@@ -26,7 +26,7 @@ router.get("/products/:ssid", async (req, res) => {
 //get product of a seller
 router.get("/products/seller/:email", async (req, res) => {
     try {
-        var { email } = req.params.email
+        var  email  = req.params.email
         const records = await Product.find({ seller: email });
         res.status(200).json(records);
     } catch (e) {
@@ -76,7 +76,7 @@ router.post("/products/buy", async (req, res) => {
 //removing a product by seller
 router.delete("/products/:ssid", async (req, res) => {
     try {
-        var { ssid } = req.params
+        var  ssid  = req.params
         console.log(ssid)
         var product = await Product.findOneAndDelete({ ssid: ssid });
         res.json(product);
@@ -135,7 +135,7 @@ router.patch("/complaint", async (req, res) => {
 router.get("/customer/:email", async (req, res) => {
     try {
 
-        var { email} = req.params.email
+        var  email = req.params.email
         var user = await User.findOne({ email: email });
         res.json(user.history);
     }
