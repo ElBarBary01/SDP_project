@@ -6,19 +6,7 @@ class CustomerService extends User {
     {
         super(name, email);
     }
-
-    async reviewComplain()
-    {
-        try{
-        var records =await axios.get("http://localhost:5001/api/complaint")
-        return records;
-
-        }
-        catch(e){
-
-        }
-    }
-
+    
     async respondToComplain(res)
     {
         try{
@@ -30,6 +18,19 @@ class CustomerService extends User {
             console.log(e.message)
         }
     }
+    async reviewComplain()
+    {
+        try{
+        var records =await axios.get("http://localhost:5001/api/complaint")
+        return records;
+
+        }
+        catch(e){
+
+            console.log(e.message);
+        }
+    }
+
 
 }
 
