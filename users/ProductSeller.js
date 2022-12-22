@@ -28,6 +28,7 @@ class ProductSeller extends User {
         if (image) {
             product.setImage(image);
         }
+        product.setSeller(this.email)
 
         try {
             console.log(product)
