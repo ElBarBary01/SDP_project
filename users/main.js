@@ -32,3 +32,7 @@ console.log(omar2.cart)
  console.log(complaints)
  service.reviewComplain({email:"omar@gmail",response:"we are working on it"})
 */
+
+var seller = new ProductSeller("Moody","omar@gmail");
+ var res = await seller.checkProductPerformance()
+console.log(res)
