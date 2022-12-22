@@ -33,12 +33,9 @@ class Customer extends User {
     }
 
     async buy() {
-        var purchase = [...this.cart,this.calculateTotalPrice]
+        var total = this.calculateTotalPrice()
         try {
-            for (i = 0; i < this.cart.length; i++) {
-                await axios.patch("http://localhost:5001/api/products", { "ssid": cart[i].ssid });
-            }
-            await axios.patch("http://localhost:5001/api/customers",{"email":this.email,"purchase":purchase})
+            await axios.patch("http://localhost:5001/api/products/buy",{"items":this.cart,"email":this.email,"total":total})
         }
         catch (e) {
             console.log(e.message)
