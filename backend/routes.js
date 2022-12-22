@@ -35,6 +35,7 @@ router.get("/products/seller/:email", async (req, res) => {
 router.post("/products", async (req, res) => {
     try {
         var product = req.body
+        console.log(product);
         await Product.insertMany(product)
         res.json(product)
     } catch (e) {

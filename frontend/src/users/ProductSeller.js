@@ -1,4 +1,4 @@
-import User from "./User.js";
+import User from "./user.js";
 import axios from "axios"
 import FactoryOrchestrator from "../factories/FactoryOrchestrator.js";
 

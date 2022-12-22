@@ -1,6 +1,6 @@
 import react, { useState } from "react";
 import NavbarSeller from "../NavbarSeller";
-
+import ProductSeller from "../users/ProductSeller";
 
 function SellerHome(){
     const [showSummer, setShowSummer] = useState(false);
@@ -30,12 +30,18 @@ function SellerHome(){
         var input = e.target.value;
         setProductType(input);
     }
-    function createProduct(e){
-        console.log(e.target);
+    async function createProduct(){
+        var seller = new ProductSeller("omar","omar@gmail");
+        //var omar2 = new Customer("omar","omar@gmail");
+        console.log(productCategory)
+        console.log(productType)
+        console.log(productName)
+        console.log(productPrice)
+
+        var product = await seller.addProduct({category: productCategory.toString(), type:productType.toString(), name:productName.toString(), price: productPrice.toString()})
     }
 
-    console.log(productCategory)
-    console.log(productType)
+    
     return(
         <>
         <NavbarSeller />
