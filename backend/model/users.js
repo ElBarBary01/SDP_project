@@ -8,5 +8,5 @@ const userSchema = new Schema({
     history:{  type: Array, default: []}
 }
 );
-const user = mongoose.model('User', userSchema, 'users');
-export default user;
+const User = mongoose.model('User', userSchema, 'users');
+export default User;
