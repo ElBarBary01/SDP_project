@@ -10,7 +10,7 @@ import NavbarComponent from "./NavbarComponent";
 import { Container } from "react-bootstrap";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
-import CustomerService from "./pages/CustomerService";
+import CustomerServ from "./pages/CustomerServ";
 import History from "./pages/History";
 import SellerProducts from "./pages/SellerProducts";
 
@@ -24,7 +24,7 @@ function App() {
         <Route path="/seller" element={<SellerHome />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/customer-service" element={<CustomerService />} />
+        <Route path="/customer-service" element={<CustomerServ />} />
         <Route path="/history" element={<History />} />
         <Route path="/seller-products" element={<SellerProducts />} />
       </Routes>

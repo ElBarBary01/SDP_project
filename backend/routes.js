@@ -13,18 +13,20 @@ router.get("/products", async (req, res) => {
         res.status(400).json({ message: e.message });
     }
 });
+//get product by ssid
 router.get("/products/:ssid", async (req, res) => {
     try {
-        var { ssid } = req.params.ssid
+        var  ssid  = req.params.ssid
         const records = await Product.find({ ssid: ssid });
         res.status(200).json(records);
     } catch (e) {
         res.status(400).json({ message: e.message });
     }
 });
+//get product of a seller
 router.get("/products/seller/:email", async (req, res) => {
     try {
-        var { email } = req.params.email
+        var  email  = req.params.email
         const records = await Product.find({ seller: email });
         res.status(200).json(records);
     } catch (e) {
@@ -35,13 +37,13 @@ router.get("/products/seller/:email", async (req, res) => {
 router.post("/products", async (req, res) => {
     try {
         var product = req.body
-        console.log(product);
         await Product.insertMany(product)
         res.json(product)
     } catch (e) {
         res.status(400).json({ message: e.message });
     }
 });
+//update products by seller
 router.patch("/products", async (req, res) => {
     try {
 
@@ -53,12 +55,19 @@ router.patch("/products", async (req, res) => {
         res.status(400).json({ message: e.message });
     }
 });
-router.patch("/products/buy", async (req, res) => {
+//when customer buys the qunatity sold is updated and purchase is added to his history
+router.post("/products/buy", async (req, res) => {
     try {
 
-        var { ssid } = req.body
-        var product = await Product.findOneAndUpdate({ ssid: ssid }, { $inc: { quantitysold: 1 } }, { new: true });
-        res.json(product);
+        var { items,email,total } = req.body
+        for(var i=0;i<items.length;i++ ){
+            console.log(items[i])
+        var product =await Product.findByIdAndUpdate(items[i]._id, { $inc: { quantitysold: items[i].quantity } }, { new: true });
+        console.log(product)
+    }
+    var user = await User.findOneAndUpdate({ email: email }, { $push: { history: { items ,total} } }, { new: true });
+    res.json(user);
+
     }
     catch (e) {
         res.status(400).json({ message: e.message });
@@ -67,7 +76,7 @@ router.patch("/products/buy", async (req, res) => {
 //removing a product by seller
 router.delete("/products/:ssid", async (req, res) => {
     try {
-        var { ssid } = req.params
+        var  ssid  = req.params
         console.log(ssid)
         var product = await Product.findOneAndDelete({ ssid: ssid });
         res.json(product);
@@ -101,9 +110,9 @@ router.post("/complaint", async (req, res) => {
 router.patch("/review", async (req, res) => {
     try {
 
-        var { ssid, comment, score } = req.body
+        var { ssid, score } = req.body
 
-        var review = await Product.findOneAndUpdate({ ssid: ssid }, { review: { score, comment } }, { new: true });
+        var review = await Product.findOneAndUpdate({ ssid: ssid }, { score: score} , { new: true });
         res.json(review);
     }
     catch (e) {
@@ -113,8 +122,8 @@ router.patch("/review", async (req, res) => {
 //reply to complaint by customer service
 router.patch("/complaint", async (req, res) => {
     try {
-        var { response, email } = req.body
-        var complaint = await Complaint.findByIdAndUpdate({ email: email }, { response: response }, { new: true })
+        var { response,email } = req.body
+        var complaint = await Complaint.findOneAndUpdate({ email: email }, { response: response }, { new: true })
         res.json(complaint)
     }
     catch (e) {
@@ -122,17 +131,29 @@ router.patch("/complaint", async (req, res) => {
     }
 
 });
-
-router.patch("/customers", async (req, res) => {
+//fetching purchase history of a customer
+router.get("/customer/:email", async (req, res) => {
     try {
 
-        var { email, purchase } = req.body
-        var user = await User.findOneAndUpdate({ email: email }, { $push: { history: { purchase } } }, { new: true });
-        res.json(user);
+        var  email = req.params.email
+        var user = await User.findOne({ email: email });
+        res.json(user.history);
     }
     catch (e) {
         res.status(400).json({ message: e.message });
-    }
-});
+    }});
+
+   //initializing a new user in database 
+    router.post("/user",async (req, res) => {
+        try {
+    
+            var { email, name,type} = req.body
+            var user = new User({name:name,email:email,type:type });
+            user.save()
+            res.json(user);
+        }
+        catch (e) {
+            res.status(400).json({ message: e.message });
+        }});
 
 export default router;
