@@ -11,7 +11,7 @@ class CustomerService extends User {
     {
         try{
         var {email,response} =res
-       var newRes = await axios.post("http://localhost:5001/api/complaint",{"email":email,"response":response})
+       var newRes = await axios.patch("http://localhost:5001/api/complaint",{"email":email,"response":response})
        return newRes
         }
         catch (e) {

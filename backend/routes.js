@@ -122,8 +122,8 @@ router.patch("/review", async (req, res) => {
 //reply to complaint by customer service
 router.patch("/complaint", async (req, res) => {
     try {
-        var { response, email } = req.body
-        var complaint = await Complaint.findByIdAndUpdate({ email: email }, { response: response }, { new: true })
+        var { response,email } = req.body
+        var complaint = await Complaint.findOneAndUpdate({ email: email }, { response: response }, { new: true })
         res.json(complaint)
     }
     catch (e) {

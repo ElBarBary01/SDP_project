@@ -1,4 +1,5 @@
 import User from "./User.js";
+import axios from "axios"
 
 class Customer extends User {
 
@@ -53,7 +54,7 @@ class Customer extends User {
     }
     async customersevice(complaint){
         try{
-        await axios.patch("http://localhost:5001/api/complaint", { "email":this.email,"complaint":complaint });
+        await axios.post("http://localhost:5001/api/complaint", { "email":this.email, "complaint":complaint });
         }
         catch(e){
             console.log(e.message)
