@@ -10,7 +10,9 @@ class CustomerService extends User {
     async reviewComplain()
     {
         try{
-        await axios.get("http://localhost:5001/api/complaint")
+        var records =await axios.get("http://localhost:5001/api/complaint")
+        return records;
+
         }
         catch(e){
 
@@ -21,7 +23,8 @@ class CustomerService extends User {
     {
         try{
         var {email,response} =res
-        await axios.post("http://localhost:5001/api/complaint",{"emal":email,"response":response})
+       var newRes = await axios.post("http://localhost:5001/api/complaint",{"email":email,"response":response})
+       return newRes
         }
         catch (e) {
             console.log(e.message)
