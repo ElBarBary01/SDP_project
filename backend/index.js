@@ -28,13 +28,6 @@ const handleServerStartup = () => {
     app.listen(PORT, () => console.log(`Server listening on port ${PORT}`))
 }
 await mongoose.connect(process.env.CONNECTION_URL, mongooseOptions, handleServerStartup)
-/*
-var newuser = new user({type:"CUSTOMER",email:"omar@gmail",name:"omar"})
-newuser.save()
-const groceryFactory = new FactoryOrchestrator().createFactory("GROCERIES")
-const newProduct = groceryFactory.createProduct("MEAT");
-console.log(newProduct)
-Product.insertMany(newProduct)*/
 
 
 
