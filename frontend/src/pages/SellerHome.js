@@ -55,7 +55,7 @@ function SellerHome(){
                 <select onChange={handleCategory} name="category">
                     <option value="SUMMER_OUTFIT">Summer Outfit</option>
                     <option value="WINTER_OUTFIT">Winter Outfit</option>
-                    <option value="GORCERY">Groceries</option>
+                    <option value="GORCERIES">Groceries</option>
                     <option value="HAND_TOOLS">Hand Tools</option>
                     <option value="POWER_TOOLS">Power Tools</option>
                 </select>
@@ -81,7 +81,7 @@ function SellerHome(){
                 :
                 <></>
                 }
-                {productCategory === "GORCERY"?
+                {productCategory === "GORCERIES"?
                 <div>
                 <label>Product Type</label>
                 <select onChange={handleType} name="category">
