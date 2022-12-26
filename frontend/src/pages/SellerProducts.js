@@ -21,7 +21,7 @@ function SellerProducts(){
         <h1 className="home-title">Seller Products</h1>
         <div className="products">
         <Row xs={1} md={4} className="g-4 row">
-        {products.map((p,idx) =>(<Col key={idx}><SellerProductCard title={p.name} price={p.price} id={p.ssid} /></Col>))}
+        {products.map((p,idx) =>(<Col key={idx}><SellerProductCard title={p.name} price={p.price} id={p.ssid} quantitysold={p.quantitysold} /></Col>))}
         </Row>
         <button onClick={checkProduct} className="btn btn-dark">Check Product Performance</button>
         </div>

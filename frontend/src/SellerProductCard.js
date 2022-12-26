@@ -36,7 +36,7 @@ function SellerProductCard(props){
 
     return(
         <div className="card">
-            <h1>{props.title}</h1><p>Price: {props.price}</p>
+            <h1>{props.title}</h1><p>Price: {props.price}</p><p>quantitysold: {props.quantitysold}</p>
             <div>
                 <button onClick={removeProduct} className="btn btn-dark">remove</button>
                 <button onClick={handleUpdate} className="btn btn-dark">update</button>

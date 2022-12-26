@@ -50,7 +50,6 @@ function Outfits(props){
       <button onClick={() => cart2.addOneToCart(props.title, props.price, props.id)} className="btn btn-outline-warning my-btn">Add to cart</button>
     }
     
-    <a href="/checkout"><button className="btn btn-outline-danger my-btn" onClick={buyNow}>Buy now</button></a>
     <button onClick={handleShow} className="btn btn-secondary my-btn">View</button>
     <button onClick={review} className="btn btn-secondary my-btn">Review</button>
     {showReply === true?
