@@ -18,7 +18,8 @@ function Home(){
           type: p.type,
           price: p.price,
           ssid: p.ssid,
-          _id: p._id
+          _id: p._id,
+          image:p.image
         }
       }))
       console.log(res.data)
@@ -28,7 +29,8 @@ function Home(){
           type: p.type,
           price: p.price,
           ssid: p.ssid,
-          _id: p._id
+          _id: p._id,
+          image:p.image
         }
       }))
       // setProducts(res.data.results.map(p => p.name))
@@ -39,7 +41,7 @@ function Home(){
   console.log(products)
   var summerOutfits = products.filter(p => p.type === "SUMMER_OUTFIT")
   var winterOutfits = products.filter(p => p.type === "WINTER_OUTFIT")
-  var groceries = products.filter(p => p.type === "GORCERY")
+  var groceries = products.filter(p => p.type === "GROCERIES")
   var handTools = products.filter(p => p.type === "HAND_TOOLS")
   var powerTools = products.filter(p => p.type === "POWER_TOOLS")
 
@@ -75,7 +77,7 @@ function Home(){
         </Row>
         <h1>Groceries 🛒</h1>
         <Row xs={1} md={4} className="g-4 row">
-        {groceries.map((p,idx) =>(<Col key={idx}><Outfits title={p.name} price={p.price} id={p._id}/></Col>))}
+        {groceries.map((p,idx) =>(<Col key={idx}><Outfits title={p.name} price={p.price} id={p._id} image={p.image}/></Col>))}
         </Row>
         <h1>Tools</h1>
         <h5>Hand Tools 🛠️</h5>

@@ -15,7 +15,7 @@ function Complaint(){
     <NavbarComponent />
     <div>
       <h1>Customer Service</h1>
-      <form action="http://localhost:5001/complain" method="POST" className="myForm">
+      <form action="http://localhost:5001/api/complaint" method="POST" className="myForm">
         <label>Your email</label>
         <input type="email" name="email"></input>
         <label>Complaint</label>

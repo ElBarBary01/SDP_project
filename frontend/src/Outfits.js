@@ -33,6 +33,7 @@ function Outfits(props){
     <>
   <div className="card">
     <h1>{props.title}</h1><p>Price: {props.price}</p>
+    <img src={props.image}></img>
     <div>
     {productQuantity > 0 ? 
       <>
@@ -53,7 +54,7 @@ function Outfits(props){
     <button onClick={handleShow} className="btn btn-secondary my-btn">View</button>
     <button onClick={review} className="btn btn-secondary my-btn">Review</button>
     {showReply === true?
-                <form action="http://localhost:5001/review/" method="POST">
+                <form action="http://localhost:5001/review/" method="PATCH">
                     <textarea name="review" className="txt-area-reply" placeholder="review"></textarea>
                     <button type="submit" className="btn btn-outline-dark">Add review</button>
                 </form>

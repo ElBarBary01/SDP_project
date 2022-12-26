@@ -98,8 +98,8 @@ router.get("/complaint", async (req, res) => {
 //complaint sending for customers
 router.post("/complaint", async (req, res) => {
     try {
-        var complaint = req.body
-        await Complaint.insertMany(complaint)
+        var {complaint,email} = req.body
+        await Complaint.insertMany({complaint,email})
         res.json(complaint)
     }
     catch (e) {
@@ -132,10 +132,10 @@ router.patch("/complaint", async (req, res) => {
 
 });
 //fetching purchase history of a customer
-router.get("/customer/:email", async (req, res) => {
+router.post("/history", async (req, res) => {
     try {
 
-        var  email = req.params.email
+        var  email = req.body.email
         var user = await User.findOne({ email: email });
         res.json(user.history);
     }
