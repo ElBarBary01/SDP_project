@@ -9,6 +9,9 @@ function NavbarSeller(){
       <li>
         <a href="/seller">Add product</a>
       </li>
+      <li>
+        <a href="/seller-products">Check Products</a>
+      </li>
     </ul>
     </nav>
   )

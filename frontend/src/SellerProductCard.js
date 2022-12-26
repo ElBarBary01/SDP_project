@@ -10,7 +10,7 @@ function SellerProductCard(props){
   const [productPrice, setProductPrice] = useState("");
 
     async function removeProduct(){
-      var seller = new ProductSeller("omar","omar@gmail");
+      var seller = new ProductSeller("omar","Seller@gmail");
       await seller.removeProduct(props.id);
     }
     function handleUpdate(){
@@ -30,7 +30,7 @@ function SellerProductCard(props){
         price: productPrice,
         ssid: props.id
       }
-      var seller = new ProductSeller("omar","omar@gmail");
+      var seller = new ProductSeller("omar","Seller@gmail");
       var result = await seller.updateProduct(product);
     }
 

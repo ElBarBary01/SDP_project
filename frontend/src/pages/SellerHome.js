@@ -31,7 +31,7 @@ function SellerHome(){
         setProductType(input);
     }
     async function createProduct(){
-        var seller = new ProductSeller("omar","omar@gmail");
+        var seller = new ProductSeller("omar","Seller@gmail");
         //var omar2 = new Customer("omar","omar@gmail");
         console.log(productCategory)
         console.log(productType)
@@ -55,7 +55,7 @@ function SellerHome(){
                 <select onChange={handleCategory} name="category">
                     <option value="SUMMER_OUTFIT">Summer Outfit</option>
                     <option value="WINTER_OUTFIT">Winter Outfit</option>
-                    <option value="GORCERIES">Groceries</option>
+                    <option value="GROCERIES">Groceries</option>
                     <option value="HAND_TOOLS">Hand Tools</option>
                     <option value="POWER_TOOLS">Power Tools</option>
                 </select>
@@ -81,7 +81,7 @@ function SellerHome(){
                 :
                 <></>
                 }
-                {productCategory === "GORCERIES"?
+                {productCategory === "GROCERIES"?
                 <div>
                 <label>Product Type</label>
                 <select onChange={handleType} name="category">

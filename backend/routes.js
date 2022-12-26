@@ -76,7 +76,7 @@ router.post("/products/buy", async (req, res) => {
 //removing a product by seller
 router.delete("/products/:ssid", async (req, res) => {
     try {
-        var  ssid  = req.params
+        var  {ssid}  = req.params
         console.log(ssid)
         var product = await Product.findOneAndDelete({ ssid: ssid });
         res.json(product);

@@ -10,7 +10,7 @@ function SellerProducts(){
     const [products, setProducts] = useState([])
 
       async function checkProduct(){
-        var seller = new ProductSeller("omar","omar@gmail");
+        var seller = new ProductSeller("omar","Seller@gmail");
         var result = await seller.checkProductPerformance();
         console.log(result.data);
         setProducts(result.data)
